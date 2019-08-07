@@ -6,4 +6,14 @@ import React, { Component } from 'react';
   в качестве пропов обёрнутому компоненту
 */
 
-export const withGivenProps = () => {}
+export const withGivenProps = (propsIn, WrappedComponent) => {
+  class withGivenProps extends React.Component {
+    constructor(props) {
+      super(props);
+    }
+    render() {
+      return <WrappedComponent {...propsIn} />;
+    }
+  }
+  return withGivenProps;
+};
