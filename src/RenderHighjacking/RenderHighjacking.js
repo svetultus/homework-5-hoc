@@ -34,7 +34,7 @@ export const withRedBackground = WrappedComponent => {
 
         return newHtmlElement;
       } else {
-        return null;
+        return htmlElement;
       }
     }
   };
